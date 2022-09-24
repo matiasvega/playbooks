@@ -5,6 +5,7 @@ pipeline {
            steps {
 					ansiblePlaybook(
 					installation: 'Ansible',
+                    inventory: 'inventory.ini',
 					playbook: 'test.yml'
                 )
             }    
