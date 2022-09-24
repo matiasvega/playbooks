@@ -3,7 +3,7 @@
   hosts: dboracle21.localdomain
   tasks:
   - name: create user in db
-    oracle_user:
+    ari_stark.ansible_oracle_modules.oracle_user:
       hostname: "192.168.56.111"
       service_name: "ORCLPDB1"
       username: "mvega"
