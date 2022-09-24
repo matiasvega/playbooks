@@ -8,7 +8,7 @@
       service_name: "ORCLPDB1"
       username: "mvega"
       password: "x"
-      schema_name: "myschema3"
+      schema_name: "myschema2"
       schema_password: "x"
       default_tablespace: "USERS"
       state: "present"
