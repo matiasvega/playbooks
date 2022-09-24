@@ -6,7 +6,7 @@ pipeline {
 					ansiblePlaybook(
 					installation: 'Ansible',
                     inventory: 'inventory.ini',
-					playbook: 'test.yml'
+					playbook: 'create_user.yml'
                 )
             }    
         }    
