@@ -1,0 +1,13 @@
+pipeline {
+    agent any
+    stages {
+        stage(" execute Ansible") {
+           steps {
+					ansiblePlaybook(
+					installation: 'Ansible',
+					playbook: '/var/jenkins_home/playbooks/test.yaml'
+                )
+            }    
+        }    
+    }
+}
