@@ -1,0 +1,14 @@
+---
+- name: Create a new schema on a remote db by running the module on the controlmachine
+  hosts: dboracle21.localdomain
+  tasks:
+  - name: create user in db
+    oracle_user:
+      hostname: "192.168.56.111"
+      service_name: "ORCLPDB1"
+      username: "mvega"
+      password: "x"
+      schema_name: "myschema3"
+      schema_password: "x"
+      default_tablespace: "USERS"
+      state: "present"
