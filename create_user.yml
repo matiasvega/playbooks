@@ -6,7 +6,7 @@
     ari_stark.ansible_oracle_modules.oracle_user:
       hostname: "192.168.56.111"
       service_name: "ORCLPDB1"
-      username: "mvega"
+      username: {{ username }}
       password: "x"
       schema_name: "myschema2"
       schema_password: "x"
