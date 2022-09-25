@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        USERNAME='username' // Added variable
+        USERNAME="${username}" // Added variable
     }
     parameters {
         string(name: 'username', defaultValue: '', description: 'username',)
