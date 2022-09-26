@@ -1,0 +1,15 @@
+pipeline {
+    agent any
+    stages {
+        stage(" execute sql script") {
+           steps {
+					ansiblePlaybook(
+					installation: 'Ansible',
+                    inventory: 'inventory.ini',
+					playbook: 'execute_sql_script.yml',
+                    credentialsId: 'ansibleUser'
+                )
+            }    
+        }    
+    }
+}
