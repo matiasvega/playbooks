@@ -8,7 +8,7 @@
         ORACLE_HOME: "/opt/oracle/product/21c/dbhome_1"
         PATH: "/opt/oracle/product/21c/dbhome_1/bin"
       args:
-        chdir: "/tmp" 
+        chdir: "/scripts" 
       become: true
       become_method: su
       become_user: oracle
