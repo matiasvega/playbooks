@@ -1,7 +1,7 @@
 ---
 - name: Execute sql script
-- hosts: dboracle21.localdomain
-- tasks:
+  hosts: dboracle21.localdomain
+  tasks:
     - name: Execute sql script
       shell: $ORACLE_HOME/bin/sqlplus -s mvega/x@ORCLPDB1 @script.sql
       environment:
