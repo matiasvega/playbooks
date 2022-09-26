@@ -1,0 +1,11 @@
+---
+- name: Create a new schema on a remote db by running the module on the controlmachine
+  hosts: dboracle21.localdomain
+  tasks:
+  - name: create user in db
+    ari_stark.ansible_oracle_modules.oracle_sql:
+      hostname: "192.168.56.111"
+      service_name: "ORCLPDB1"
+      username: "mvega"
+      password: "x"
+      script: '@ts.sql'
