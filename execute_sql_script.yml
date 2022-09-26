@@ -1,5 +1,5 @@
 ---
-- name: Create a new schema on a remote db by running the module on the controlmachine
+- name: Execute sql script
   hosts: dboracle21.localdomain
   tasks:
   - name: create user in db
@@ -8,4 +8,4 @@
       service_name: "ORCLPDB1"
       username: "mvega"
       password: "x"
-      script: '@sql/ts.sql'
+      script: '@./sql/ts.sql'
