@@ -4,7 +4,7 @@
   tasks:
     - name: Execute sql script
       shell: $ORACLE_HOME/bin/sqlplus -s mvega/x@ORCLPDB1 @/scripts/oracle/ts.sql
-        environment:
+        environment: 
           ORACLE_HOME: "/opt/oracle/product/21c/dbhome_1"
           PATH: "/opt/oracle/product/21c/dbhome_1/bin"
         args:
