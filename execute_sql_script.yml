@@ -2,11 +2,11 @@
 - name: Execute sql script
   hosts: dboracle21.localdomain
   tasks:
-    - name: Execute sql script
-      shell: $ORACLE_HOME/bin/sqlplus -s mvega/x@ORCLPDB1 @/scripts/oracle/ts.sql
+  - name: Execute sql script
+    shell: $ORACLE_HOME/bin/sqlplus -s mvega/x@ORCLPDB1 @/scripts/oracle/ts.sql
       environment: 
         ORACLE_HOME: "/opt/oracle/product/21c/dbhome_1"
-         PATH: "/opt/oracle/product/21c/dbhome_1/bin"
+          PATH: "/opt/oracle/product/21c/dbhome_1/bin"
       args:
         chdir: "/scripts" 
       become: true
