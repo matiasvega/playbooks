@@ -12,6 +12,9 @@ pipeline {
                         c_sid: env.c_sid,
                         c_blocking: env.c_blocking,
                         sql_id: env.sql_id,
+                        jiraServer: env.jira_server,
+                        jiraUser: env.jira_user,
+                        jiraPass: env.jira_pass,
                     ]
                 )
             }    
