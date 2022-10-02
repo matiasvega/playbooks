@@ -14,12 +14,12 @@
     become_user: oracle
     become_exe: 'sudo su -'
 
-- name: Attach a file
-  community.general.jira:
-    uri: '{{ jiraServer }}'
-    username: '{{ jiraUser }}'
-    password: '{{ jiraPass }}'
-    issue: TEST-1
-    operation: attach
-    attachment:
-      filename: /tmp/blocking_sqls_details.csv
+  - name: Attach a file
+    community.general.jira:
+      uri: '{{ jiraServer }}'
+      username: '{{ jiraUser }}'
+      password: '{{ jiraPass }}'
+      issue: TEST-1
+      operation: attach
+      attachment:
+        filename: /tmp/blocking_sqls_details.csv
