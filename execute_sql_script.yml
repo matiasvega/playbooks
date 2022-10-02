@@ -3,7 +3,7 @@
   hosts: dboracle21.localdomain
   tasks:
   - name: Execute sql script
-    shell: "$ORACLE_HOME/bin/sqlplus -s mvega/x@ORCLPDB1 @/scripts/oracle/R_blocking_session_mnpt.sql {{ sid }} {{ blocking_session }} {{ sql_id }}"
+    shell: $ORACLE_HOME/bin/sqlplus -s mvega/x@ORCLPDB1 @/scripts/oracle/R_blocking_session_mnpt.sql {{ c_sid }} {{ c_blocking= }} {{ sql_id }}
     environment: 
       ORACLE_HOME: "/opt/oracle/product/21c/dbhome_1"
       PATH: "/opt/oracle/product/21c/dbhome_1/bin"
