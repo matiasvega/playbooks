@@ -22,4 +22,4 @@
       issue: TEST-1
       operation: attach
       attachment:
-        filename: /tmp/blocking_sqls_details.csv
+        filename: /tmp/blocking_sqls_details.csv,/tmp/blocking_sqls_details.csv
