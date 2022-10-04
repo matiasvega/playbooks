@@ -16,9 +16,11 @@
 
   - name: Create zip fil with the output
     archive:
-      path: /tmp/blocking_session_details.csv
-      path: /tmp/blocking_sqls_details.csv
-      path: /tmp/47_fwg33s4f6bkjd_awr_report.html
-      path: /tmp/bind_47_fwg33s4f6bkjd.csv
-      path: /tmp/Xplan_47_fwg33s4f6bkjd.txt
-
+      path: 
+        - /tmp/blocking_session_details.csv
+        - /tmp/blocking_sqls_details.csv
+        - /tmp/47_fwg33s4f6bkjd_awr_report.html
+        - /tmp/bind_47_fwg33s4f6bkjd.csv
+        - /tmp/Xplan_47_fwg33s4f6bkjd.txt
+      dest: /tmp/output.zip
+      format: zip
