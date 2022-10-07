@@ -30,3 +30,12 @@
       operation: attach
       attachment:
         filename: /tmp/output.zip      
+
+  - name: Comment on issue
+    community.general.jira:
+      uri: '{{ jiraServer }}'
+      username: '{{ jiraUser }}'
+      password: '{{ jiraPass }}'
+      issue: TEST-1
+      operation: comment
+      comment: "A comment added by Ansible: PFA"
