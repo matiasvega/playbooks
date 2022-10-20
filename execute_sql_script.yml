@@ -25,7 +25,7 @@
   - name: Create zip fil with the output
     archive:
       path: 
-        - /tmp/blocking
+        - {{ tmp_path }}
       dest: /tmp/output.zip
       format: zip
 
