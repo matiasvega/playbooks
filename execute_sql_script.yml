@@ -56,4 +56,3 @@
     file: 
       path: "{{ tmp_path }}"
       state: absent
-    when: not debug_mode|bool  
