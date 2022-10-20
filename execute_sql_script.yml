@@ -9,6 +9,10 @@
       owner: "oracle" 
       group: "oinstall"
       mode: 0755
+    become: true
+    become_method: su
+    become_user: oracle
+    become_exe: 'sudo su -'
 
   - name: Execute sql script
     shell: "$ORACLE_HOME/bin/sqlplus -s mvega/x@ORCLPDB1 @/scripts/oracle/R_blocking_session_mnpt.sql {{ c_sid }} {{ c_blocking }} {{ sql_id }} {{ tmp_path }}"
