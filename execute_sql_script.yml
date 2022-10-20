@@ -60,3 +60,12 @@
     become_method: su
     become_user: oracle
     become_exe: 'sudo su -'
+
+  - name: Remove zip file with results
+    file: 
+      path: "/tmp/output.zip"
+      state: absent
+    become: true
+    become_method: su
+    become_user: oracle
+    become_exe: 'sudo su -'
