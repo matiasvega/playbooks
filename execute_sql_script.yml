@@ -63,5 +63,5 @@
 
   - name: Remove zip file with results
     file: 
-      path: "/tmp/output.zip"
+      path: /tmp/output.zip
       state: absent'
