@@ -51,3 +51,9 @@
       issue: TEST-1
       operation: comment
       comment: "A comment added by Ansible: PFA"
+
+  - name: Remove temp directory {{ tmp_path }}
+    file: 
+      path: "{{ tmp_path }}"
+      state: absent
+    when: not debug_mode|bool  
