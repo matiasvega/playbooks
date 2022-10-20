@@ -2,8 +2,16 @@
 - name: Execute sql script
   hosts: dboracle21.localdomain
   tasks:
+  - name: Create temp directory {{ tmp_path }}
+    file: 
+      path: "{{ tmp_path }}"
+      state: directory
+      owner: "oracle" 
+      group: "oinstall"
+      mode: 0755
+
   - name: Execute sql script
-    shell: "$ORACLE_HOME/bin/sqlplus -s mvega/x@ORCLPDB1 @/scripts/oracle/R_blocking_session_mnpt.sql {{ c_sid }} {{ c_blocking }} {{ sql_id }}"
+    shell: "$ORACLE_HOME/bin/sqlplus -s mvega/x@ORCLPDB1 @/scripts/oracle/R_blocking_session_mnpt.sql {{ c_sid }} {{ c_blocking }} {{ sql_id }} {{ tmp_path }}"
     environment: 
       ORACLE_HOME: "/opt/oracle/product/21c/dbhome_1"
       PATH: "/opt/oracle/product/21c/dbhome_1/bin"
